@@ -83,7 +83,12 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the number is even, False otherwise.
      */
     public static Boolean isEven(Integer num) {
-        return null; // Replace null with the variable you used to store the result
+        Boolean result = false;
+        Integer remainder = math.mod(num, 2);
+        if (remainder == 0) {
+            result = true;}
+
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
