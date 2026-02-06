@@ -82,8 +82,9 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Double division(Double a, Double b) {
         Double result;
+        if (b == 0) { result = 0; return result;}
         if (a != null && b != null) {
-        result = a * b;
+        result = a / b;
         } else { result = null; }
         return result; 
     }
