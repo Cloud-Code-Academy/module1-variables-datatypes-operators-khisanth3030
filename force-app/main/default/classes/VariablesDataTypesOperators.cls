@@ -32,7 +32,11 @@ public with sharing class VariablesDataTypesOperators {
      * @return The sum of the two numbers, or null if either number is null.
      */
     public static Integer addition(Integer a, Integer b) {  
-        return null; // Replace null with the variable you used to store the result
+        Integer result;
+        if (a != null && b != null) {
+            result = a + b;
+        } else { result = null; }
+        return result; 
     }
 
     /**
@@ -84,11 +88,13 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Boolean isEven(Integer num) {
         Boolean result = false;
+        if (num == null) {
+            return null;}
         Integer remainder = math.mod(num, 2);
         if (remainder == 0) {
             result = true;}
 
-        return result; // Replace null with the variable you used to store the result
+        return result; 
     }
 
     /**
