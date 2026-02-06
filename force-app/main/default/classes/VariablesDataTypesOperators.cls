@@ -106,7 +106,6 @@ public with sharing class VariablesDataTypesOperators {
         Integer remainder = math.mod(num, 2);
         if (remainder == 0) {
             result = true;}
-
         return result; 
     }
 
@@ -118,7 +117,12 @@ public with sharing class VariablesDataTypesOperators {
      * @return true if the number is positive, false otherwise.
      */
     public static Boolean isPositive(Integer num) {
-        return null; // Replace null with the variable you used to store the result
+        Boolean result = false;
+        if (num == null) {
+            return null;}       
+        if (num > 0) {
+            result = true;}
+        return result;    
     }
 
     /**
