@@ -308,12 +308,14 @@ public with sharing class VariablesDataTypesOperators {
      * @return The quotient as a casted (round down) Integer.
      */
     public static Integer performDivisionAndCast(Double a, Double b) {
+        if(a==null || b==null || b==0){return null;}       
+
         // Perform the division and cast (round down) off the result.
-        Double divisionResult = null;
+        Double divisionResult = Math.floor(a/b);
 
         // Write the code for type casting the divisionResult to an Integer
-        Integer roundedResult = null;
-        return null; // Replace null with the variable you used to store the result
+        Integer roundedResult = (Integer)divisionResult;
+        return roundedResult; 
     }
 
     /**
