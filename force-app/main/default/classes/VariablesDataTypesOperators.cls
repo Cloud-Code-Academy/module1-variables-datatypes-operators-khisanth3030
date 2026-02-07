@@ -242,10 +242,9 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Integer adjustOrderOfOperations1(Integer a, Integer b, Integer c) {
         // Add parentheses around the addition operation so that it is performed before multiplication
-        Integer result = a + b * c;
-
-        // Return the result
-        return null; // Replace null with the variable you used to store the result
+        if(a==null || b==null || c==null){return null;}
+        Integer result = (a + b) * c;
+        return result; 
     }
 
     /**
