@@ -204,10 +204,13 @@ public with sharing class VariablesDataTypesOperators {
      * @param minutes The number of minutes.
      * @return The number of milliseconds equivalent to the given number of minutes.
      */
-    Integer MILLISECONDS_PER_MINUTE = null; // Make this value a constant
+    public static final Integer MILLISECONDS_PER_MINUTE = 60000; // Make this value a constant
     public static Integer convertMinutesToMilliseconds(Integer minutes) {
         Integer milliseconds;
-        return null; // Replace null with the variable you used to store the result
+        if (minutes != null) {
+            milliseconds = minutes * MILLISECONDS_PER_MINUTE;
+        } else { return null; }
+        return milliseconds; 
     }    
 
     /**
