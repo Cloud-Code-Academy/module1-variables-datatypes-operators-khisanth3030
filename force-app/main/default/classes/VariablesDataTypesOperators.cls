@@ -363,6 +363,9 @@ public with sharing class VariablesDataTypesOperators {
      * @return The total cost after applying the sales tax.
      */
     public static Decimal calculateTotalCost(Decimal pricePerUnit, Integer numberOfUnits, Decimal salesTaxRate) {
-        return null; // Replace null with the variable you used to store the result
+        Decimal result;
+        if(pricePerUnit==null || numberOfUnits==null || salesTaxRate==null){return null;}
+        result = (pricePerUnit * (Decimal)numberOfUnits) * (1.0 + salesTaxRate);
+        return result; // Replace null with the variable you used to store the result
     }
 }
